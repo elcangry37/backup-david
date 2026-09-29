@@ -1,0 +1,16 @@
+index.html
+  h_cc831b28791373 1-63
+privacy/index.html
+  h_cc831b28791373 1-79
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1f250aa1d30d29ccde6d287dafe4a6b2eb1701bc",
+  "prompts": {},
+  "humans": {
+    "h_cc831b28791373": {
+      "author": "David Murillo <davidmurilloh37@gmail.com>"
+    }
+  }
+}
