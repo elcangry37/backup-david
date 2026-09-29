@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>backup-david</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    max-width: 42rem; margin: 0 auto; padding: 3rem 1.25rem;
+  }
+  h1 { font-size: 1.75rem; margin-bottom: .25rem; }
+  .sub { color: #666; margin-top: 0; }
+  h2 { font-size: 1.1rem; margin-top: 2.25rem; }
+  ul { padding-left: 1.2rem; }
+  li { margin: .35rem 0; }
+  footer { margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid #8884; font-size: .9rem; }
+  a { color: #0a58ca; }
+  @media (prefers-color-scheme: dark) { a { color: #7ab4ff; } .sub { color: #aaa; } }
+</style>
+</head>
+<body>
+
+<h1>backup-david</h1>
+<p class="sub">Personal encrypted backup utility.</p>
+
+<h2>What this application does</h2>
+<p>
+  backup-david is a private, single-user application that creates encrypted
+  backups of the owner's own project folders and stores them in the owner's
+  own Google Drive account.
+</p>
+<p>
+  It is built on the open-source tools
+  <a href="https://restic.net/">restic</a> (encryption and deduplication) and
+  <a href="https://rclone.org/">rclone</a> (transfer to Google Drive). It runs
+  as a scheduled task on the owner's computer.
+</p>
+
+<h2>How it uses Google Drive</h2>
+<ul>
+  <li>It requests the <code>drive.file</code> scope only.</li>
+  <li>That scope limits access strictly to files the application itself creates.</li>
+  <li>It cannot read, modify, or delete any other file in the user's Google Drive.</li>
+  <li>All data is encrypted on the user's computer before upload. The stored
+      backup is opaque: file names and contents are not readable by anyone
+      without the owner's encryption password.</li>
+</ul>
+
+<h2>Availability</h2>
+<p>
+  This application is not offered as a public service and has no users other
+  than its owner. It is published here only to satisfy Google's OAuth
+  configuration requirements.
+</p>
+
+<footer>
+  <a href="./privacy/">Privacy policy</a>
+</footer>
+
+</body>
+</html>
